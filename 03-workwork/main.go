@@ -11,14 +11,14 @@ import (
 func main() {
 
 	// GORM数据库连接
-	gormDB, err := gorm.Open(mysql.Open("root:root@tcp(192.168.0.x:3306)/gorm?charset=utf8mb4&parseTime=True&loc=Local"))
+	gormDB, err := gorm.Open(mysql.Open("root:root@tcp(192.168.x.x:3306)/gorm?charset=utf8mb4&parseTime=True&loc=Local"))
 	if err != nil {
 		panic(err)
 	}
 
 	/*
 		// Sqlx数据库连接
-		sqlxDB, err := sqlx.Connect("mysql", "root:root@tcp(192.168.0.x:3306)/gorm?charset=utf8mb4&parseTime=True&loc=Local")
+		sqlxDB, err := sqlx.Connect("mysql", "root:root@tcp(192.168.x.x:3306)/gorm?charset=utf8mb4&parseTime=True&loc=Local")
 		if err != nil {
 			panic(err)
 		}
